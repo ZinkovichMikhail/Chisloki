@@ -3,7 +3,7 @@
 
 using namespace std;
 
-// Выводим матрицу
+// Г‚Г»ГўГ®Г¤ГЁГ¬ Г¬Г ГІГ°ГЁГ¶Гі
 void print_matrix(double** matrix_full, int n) {
     cout.precision(3);
     for (int i = 0; i < n; i++) {
@@ -15,7 +15,7 @@ void print_matrix(double** matrix_full, int n) {
     cout << endl;
 }
 
-// Заполнение матрицы
+// Г‡Г ГЇГ®Г«Г­ГҐГ­ГЁГҐ Г¬Г ГІГ°ГЁГ¶Г»
 void fill_matrix(double** matrix_full, double* matrix_answers, int n, double L1, double L2, double L3) {
     matrix_full[0][0] = (2 * L1) + (4 * L2);
     matrix_full[0][1] = 2 * (L1 - L2);
@@ -32,7 +32,7 @@ void fill_matrix(double** matrix_full, double* matrix_answers, int n, double L1,
     matrix_answers[2] = (-4 * L1) + L2 - (9 * L3);
 }
 
-// Создание и заполнение матрицы L, D и LT
+// Г‘Г®Г§Г¤Г Г­ГЁГҐ ГЁ Г§Г ГЇГ®Г«Г­ГҐГ­ГЁГҐ Г¬Г ГІГ°ГЁГ¶Г» L, D ГЁ LT
 void create_and_fill_matrices(double** matrix_full, double** matrix_L, double** matrix_D, double** matrix_a_slash, double** matrix_LT, double* matrix_answers, int n) {
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
@@ -104,7 +104,7 @@ void create_and_fill_matrices(double** matrix_full, double** matrix_L, double** 
     }
 }
 
-// Вывод ответов
+// Г‚Г»ГўГ®Г¤ Г®ГІГўГҐГІГ®Гў
 void print_answers(double** matrix_L, double** matrix_D, double** matrix_LT, double* matrix_answers, int n) {
     double* answers_L = new double[n];
     for (int i = 0; i < n; i++) {
@@ -147,7 +147,7 @@ void print_answers(double** matrix_L, double** matrix_D, double** matrix_LT, dou
     delete[] answers_LT;
 }
 
-// Освобождение памяти
+// ГЋГ±ГўГ®ГЎГ®Г¦Г¤ГҐГ­ГЁГҐ ГЇГ Г¬ГїГІГЁ
 void delete_memory(double** matrix_full, double** matrix_L, double** matrix_D, double** matrix_a_slash, double** matrix_LT, double* matrix_answers, int n) {
     for (int i = 0; i < n; i++) {
         delete[] matrix_full[i];
