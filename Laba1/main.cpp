@@ -6,7 +6,7 @@ using namespace std;
 int main() {
     int n = 3;
     double L1, L2, L3;
-    //Вводим наши Л1 Л2 Л35
+    //Г‚ГўГ®Г¤ГЁГ¬ Г­Г ГёГЁ Г‹1 Г‹2 Г‹35
     cout << "Write L1, L2 and L3" << endl;
     cin >> L1 >> L2 >> L3;
 
@@ -34,14 +34,14 @@ int main() {
         matrix_LT[i] = new double[n];
     }
 
-    // Используем функции заполнения и вывода
+    // Г€Г±ГЇГ®Г«ГјГ§ГіГҐГ¬ ГґГіГ­ГЄГ¶ГЁГЁ Г§Г ГЇГ®Г«Г­ГҐГ­ГЁГї ГЁ ГўГ»ГўГ®Г¤Г 
     fill_matrix(matrix_full, matrix_answers, n, L1, L2, L3);
     print_matrix(matrix_full, n);
 
-    // Создаем и заполняем матрицы
+    // Г‘Г®Г§Г¤Г ГҐГ¬ ГЁ Г§Г ГЇГ®Г«Г­ГїГҐГ¬ Г¬Г ГІГ°ГЁГ¶Г»
     create_and_fill_matrices(matrix_full, matrix_L, matrix_D, matrix_a_slash, matrix_LT, matrix_answers, n);
 
-    // Выводим три матрицы
+    // Г‚Г»ГўГ®Г¤ГЁГ¬ ГІГ°ГЁ Г¬Г ГІГ°ГЁГ¶Г»
     cout << "Matrix L: " << endl;
     print_matrix(matrix_L, n);
     cout << endl << "Matrix D: " << endl;
@@ -49,10 +49,10 @@ int main() {
     cout << endl << "Matrix LT: " << endl;
     print_matrix(matrix_LT, n);
 
-    // Выводим ответы
+    // Г‚Г»ГўГ®Г¤ГЁГ¬ Г®ГІГўГҐГІГ»
     print_answers(matrix_L, matrix_D, matrix_LT, matrix_answers, n);
 
-    // Освобождаем память
+    // ГЋГ±ГўГ®ГЎГ®Г¦Г¤Г ГҐГ¬ ГЇГ Г¬ГїГІГј
     delete_memory(matrix_full, matrix_L, matrix_D, matrix_a_slash, matrix_LT, matrix_answers, n);
 
     return 0;
