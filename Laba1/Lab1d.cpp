@@ -3,7 +3,7 @@
 
 using namespace std;
 
-// Функция для печати матрицы и столбца ответов
+// Г”ГіГ­ГЄГ¶ГЁГї Г¤Г«Гї ГЇГҐГ·Г ГІГЁ Г¬Г ГІГ°ГЁГ¶Г» ГЁ Г±ГІГ®Г«ГЎГ¶Г  Г®ГІГўГҐГІГ®Гў
 void print_matrix(double** matrix_full, double* matrix_answers, int n) {
     cout << endl << "Matrix: " << endl;
     for (int i = 0; i < n; i++) {
@@ -16,7 +16,7 @@ void print_matrix(double** matrix_full, double* matrix_answers, int n) {
     cout << endl;
 }
 
-// Функция для вычисления вектора невязок
+// Г”ГіГ­ГЄГ¶ГЁГї Г¤Г«Гї ГўГ»Г·ГЁГ±Г«ГҐГ­ГЁГї ГўГҐГЄГІГ®Г°Г  Г­ГҐГўГїГ§Г®ГЄ
 double* vectorNevyaz(double** matrix_full, double* matrix_answers, double* answers, int n) {
     double* tempSum = new double[n] {};
     for (int i = 0; i < n; i++) {
@@ -30,7 +30,7 @@ double* vectorNevyaz(double** matrix_full, double* matrix_answers, double* answe
     return tempSum;
 }
 
-// Функция для решения системы линейных уравнений методом Гаусса
+// Г”ГіГ­ГЄГ¶ГЁГї Г¤Г«Гї Г°ГҐГёГҐГ­ГЁГї Г±ГЁГ±ГІГҐГ¬Г» Г«ГЁГ­ГҐГ©Г­Г»Гµ ГіГ°Г ГўГ­ГҐГ­ГЁГ© Г¬ГҐГІГ®Г¤Г®Г¬ ГѓГ ГіГ±Г±Г 
 double* find_x(double** matrix_full, double* matrix_answers, int n) {
     for (int i = 0; i < n; i++) {
         double max_number = abs(matrix_full[i][i]);
@@ -84,7 +84,7 @@ double* find_x(double** matrix_full, double* matrix_answers, int n) {
     return answers;
 }
 
-// Функция для вычисления относительной ошибки
+// Г”ГіГ­ГЄГ¶ГЁГї Г¤Г«Гї ГўГ»Г·ГЁГ±Г«ГҐГ­ГЁГї Г®ГІГ­Г®Г±ГЁГІГҐГ«ГјГ­Г®Г© Г®ГёГЁГЎГЄГЁ
 double fault(double* answers, double* new_answers, int n) {
     double* result = new double[n];
     for (int i = 0; i < n; i++) {
