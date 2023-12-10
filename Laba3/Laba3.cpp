@@ -161,15 +161,15 @@ double* neutone(double* yk_plus, double* yk, double tk, double Tau, int n)
 			return 0;
 		}
 
-		yk_plus[0] += An[0];				//óòî÷íåíèå ðåøåíèÿ
+		yk_plus[0] += An[0];				//Ã³Ã²Ã®Ã·Ã­Ã¥Ã­Ã¨Ã¥ Ã°Ã¥Ã¸Ã¥Ã­Ã¨Ã¿
 		yk_plus[1] += An[1];
 
-		if (fabs(f1(yk_plus, yk, tk, Tau)) > fabs(f2(yk_plus, yk, tk, Tau))) //ïîäñ÷åò ïåðâîé ïîãðåøíîñòè
+		if (fabs(f1(yk_plus, yk, tk, Tau)) > fabs(f2(yk_plus, yk, tk, Tau))) //Ã¯Ã®Ã¤Ã±Ã·Ã¥Ã² Ã¯Ã¥Ã°Ã¢Ã®Ã© Ã¯Ã®Ã£Ã°Ã¥Ã¸Ã­Ã®Ã±Ã²Ã¨
 			b1 = fabs(f1(yk_plus, yk, tk, Tau));
 		else
 			b1 = fabs(f2(yk_plus, yk, tk, Tau));
 
-		for (int i = 0; i < n; i++)										//ïîäñ÷åò âòîðîé ïîãðåøíîñòè
+		for (int i = 0; i < n; i++)										//Ã¯Ã®Ã¤Ã±Ã·Ã¥Ã² Ã¢Ã²Ã®Ã°Ã®Ã© Ã¯Ã®Ã£Ã°Ã¥Ã¸Ã­Ã®Ã±Ã²Ã¨
 		{
 			if (fabs(An[i]) < 1)
 				b2 = fabs(An[i]);
