@@ -72,7 +72,7 @@ void nev(double* F, double* x) {
 
 
 // find derivatives
-// M = относительное приращение
+// M = Г®ГІГ­Г®Г±ГЁГІГҐГ«ГјГ­Г®ГҐ ГЇГ°ГЁГ°Г Г№ГҐГ­ГЁГҐ
 double derivative_for_x(double* x, double (*func)(double, double), double M) {
 	double temp;
 	if (x[0] == 0) {
